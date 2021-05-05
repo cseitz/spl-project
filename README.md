@@ -6,6 +6,9 @@
 
 ## Execution
 ```bash
+# JavaScript
 node javascript/main.js
-rustc rust/main.rs && rust/main
+
+# Rust
+rustc rust/main.rs && ./main
 ```
