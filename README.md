@@ -53,13 +53,15 @@ JavaScript uses dynamic typing that infers the desired type at runtime based on 
 
 ```rust
 // Rust
-let a: u32 = 5;
-let b: u32 = 8;
-// u32 is an unsigned 32-bit integer.
-
 fn main() {
+  // u32 is an unsigned 32-bit integer.
+  let a: u32 = 5;
+  let b: u32 = 8;
+
   let c: u32 = a + b;
-  println!(c) // 13
+  let s: String = c.to_string(); // Our 32-bit integer must be converted to a string in order to print it.
+  println!("{}", s) // We must use extra arguments in order to print our string literal.
+  // Outputs: 13
 }
 ```
 
@@ -67,9 +69,11 @@ fn main() {
 // JavaScript
 let a = 5;
 let b = 8;
+let c = a + b;
 // JavaScript infers we are using an integer.
 
-console.log(a + b); // 13
+console.log(c); // JavaScript knows to convert c to a string so we may print it to the console.
+// Outputs: 13
 ```
 
 ## Pass by Value & Reference vs. Dynamic Passing
