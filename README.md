@@ -78,4 +78,51 @@ console.log(c); // JavaScript knows to convert c to a string so we may print it 
 
 ## Pass by Value & Reference vs. Dynamic Passing
 
+Rust allows a choice of pass-by-value and pass-by-reference.
+
+JavaScript does not. In JavaScript, objects are passed by reference but everything else is passed by value.
+
+```rust
+// Rust
+
+struct Obj {
+  counter: u32,
+}
+
+fn increment_by(item: &mut Obj, amount: u32) { // Pass item by reference, amount by value.
+  (*item).counter += amount;
+  // amount = 5; <- "cannot assign to immutable argument"
+  println!("{}", amount.to_string()); // Outputs: 2
+}
+
+fn main() {
+  let mut obj = Obj {
+    counter: 5,
+  };
+  let n: u32 = 2;
+  increment_by(&mut obj, n);
+  println!("{}", obj.counter.to_string()); // Outputs: 7
+  println!("{}", n.to_string()); // Outputs: 2
+}
+```
+
+```js
+// JavaScript
+let obj = {
+  counter: 5,
+};
+function incrementBy(item, amount) {
+  obj.counter += amount; // Correctly changes obj.counter, as objects are passed by reference.
+  amount = 0; // Fails to change what was passed as amount, as its passed by value.
+  console.log(amount); // Outputs: 0
+};
+
+let n = 2;
+incrementBy(obj, n);
+console.log(obj.counter); // Outputs: 7
+console.log(n); // Outputs: 2
+```
+
+
+
 ## Smart Allocation vs. Garbage Collection

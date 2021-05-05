@@ -1,9 +1,21 @@
+// Rust
+
+struct Obj {
+  counter: u32,
+}
+
+fn increment_by(item: &mut Obj, amount: u32) {
+    (*item).counter += amount;
+    // amount = 5; <- "cannot assign to immutable argument"
+    println!("{}", amount.to_string()); // Outputs: 2
+}
+
 fn main() {
-    let a: u32 = 5;
-    let b: u32 = 8;
-    // u32 is an unsigned 32-bit integer.
-    let c: u32 = a + b;
-    let s: String = c.to_string(); // Our 32-bit integer must be converted to a string in order to print it.
-    println!("{}", s) // We must use extra arguments in order to print our string literal.
-    // Outputs: 13
+  let mut obj = Obj {
+      counter: 5,
+  };
+  let n: u32 = 2;
+  increment_by(&mut obj, n);
+  println!("{}", obj.counter.to_string()); // Outputs: 7
+  println!("{}", n.to_string()); // Outputs: 2
 }
