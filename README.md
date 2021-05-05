@@ -2,6 +2,9 @@
 
 Rust and JavaScript are both highly versatile tools for coding powerful applications, yet each has its own specializations. Both languages vary significantly across programming paradigms, and this project sets out to highlight four of those.
 
+#### [Rust Code](./main.rs)
+#### [JavaScript Code](./javascript/main.js)
+
 ## Installation
 
 In order to execute the code included in this project, one must install both Rust and Node.js
