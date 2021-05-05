@@ -123,6 +123,8 @@ console.log(obj.counter); // Outputs: 7
 console.log(n); // Outputs: 2
 ```
 
-
-
 ## Smart Allocation vs. Garbage Collection
+
+Rust is intelligent about how memory is allocated and uses interesting techniques and compiler optimization to be able to know when memory is no longer needed, and have it be marked for deallocation.
+
+JavaScript, on the other hand, relies on a Garbage Collector that searches through objects and deallocates instances that are no longer being referred to.
