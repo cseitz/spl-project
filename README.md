@@ -155,7 +155,8 @@ Rust is intelligent about how memory is allocated and uses interesting technique
 
 JavaScript, on the other hand, relies on a Garbage Collector that searches through objects and deallocates instances that are no longer being referred to.
 
-# Reversing an Array via Linked List
+# Project Submission
+## Reversing an Array via Linked List
 
 #### [rust/main.rs](./javascript/main.js)
 ```rust
