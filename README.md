@@ -2,6 +2,12 @@
 
 Rust and JavaScript are both highly versatile tools for coding powerful applications, yet each has its own specializations. Both languages vary significantly across programming paradigms, and this project sets out to highlight four of those.
 
+In the following source code, the following programming paradigms will be showcased:
+1. [Compiled vs. Interpreted](#compiled-vs-interpreted)
+2. [Static Typing vs. Dynamic Typing](#static-typing-vs-dynamic-typing)
+3. [Pass by Value & Reference vs. Dynamic Passing](#pass-by-value--reference-vs-dynamic-passing)
+4. [Smart Allocation vs. Garbage Collection](#smart-allocation-vs-garbage-collection)
+
 #### [Rust Code](./rust/main.rs)
 #### [JavaScript Code](./javascript/main.js)
 
