@@ -47,6 +47,28 @@ fn main() { // Entry Point for Rust
 
 ## Static Typing vs. Dynamic Typing
 
+Rust has static typing, requiring types to be defined before compilation and they are unable to be changed.
+
+JavaScript uses dynamic typing that infers the desired type at runtime based on how the variable is used.
+
+```rust
+// Rust
+let a: u32 = 5;
+let b: u32 = 8;
+
+fn main() {
+  let c: u32 = a + b;
+  println!(c) // 13
+}
+```
+
+```js
+// JavaScript
+let a = 5;
+let b = 8;
+console.log(a + b); // 13
+```
+
 ## Pass by Value & Reference vs. Dynamic Passing
 
 ## Smart Allocation vs. Garbage Collection
