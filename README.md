@@ -10,7 +10,7 @@ In the following source code, the following programming paradigms will be showca
 
 ## Code Submissions
 
-Below, I showcase each programming paradigm and provide some sample code that illustraits it.
+Below, I showcase each programming paradigm and provide some sample code that illustrates it.
 
 Inside of `javascript/main.js` and `rust/main.rs`, I include code that showcases all four paradigms.
 
