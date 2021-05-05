@@ -8,7 +8,7 @@ In the following example code, the following programming paradigms will be showc
 3. [Pass by Value & Reference vs. Dynamic Passing](#pass-by-value--reference-vs-dynamic-passing)
 4. [Smart Allocation vs. Garbage Collection](#smart-allocation-vs-garbage-collection)
 
-These paradigms are all present within the final [submission code](#project-submission)
+These paradigms are all present within the final [submission code](#project-submission).
 
 ## Code Submissions
 
