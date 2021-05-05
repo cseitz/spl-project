@@ -58,6 +58,8 @@ console.log("Hello, world!");
 node file.js # Run Interpreter & Execute
 ```
 
+Rust must be compiled.
+
 ```rust
 // Rust
 fn main() { // Entry Point for Rust
