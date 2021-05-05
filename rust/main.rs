@@ -17,4 +17,5 @@ fn main() { // Entry point due to rust being compiled.
     increment_by(&mut obj, n);
     println!("{}", obj.counter.to_string()); // Outputs: 7
     println!("{}", n.to_string()); // Outputs: 2
+    // obj and n are deallocated due to leaving scope
 }
