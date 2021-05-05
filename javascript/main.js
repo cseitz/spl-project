@@ -1,19 +1,30 @@
-let obj = {
-  counter: 5,
-};
+// JavaScript
+// Reverses an array of values via Linked List
 
-function incrementBy(item, amount) { // Pass by Reference due to object, Pass by value.
-  obj.counter += amount; // Correctly changes obj.counter, as objects are passed by reference.
-  amount = 0; // Fails to change what was passed as amount, as its passed by value.
-  console.log(amount); // Outputs: 0, but n remains unchanged.
-  // amount is technically not deallocated here, since we use garbage collection we need to wait till it runs again to deallocate.
-};
+class Node {
+  constructor(config = {}) {
+    let { prev, value } = config;
+    this.prev = prev || null; // Optonal Pass by Value
+    this.value = value || null; // Optonal Pass by Value
+  }
+}
 
-// JavaScript doesn't require an entry point, it just runs what it sees.
+let array = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20];
+// JavaScript knows to use the Number type.
 
-let n = 2;
-incrementBy(obj, n); // Passes obj by reference, n by value.
-console.log(obj.counter); // Outputs: 7
-console.log(n); // Outputs: 2
+let list = new Node();
+for (let x of array) {
+  let node = new Node({
+    prev: list, // JavaScript automatically passes objects by reference, so no need for pointers.
+    value: x // Pass by Value
+  });
+  list = node; // Reassign our list head node
+}
 
-// All memory is garbage collected due to everything finishing.
+let head = list;
+while (head.prev) {
+  console.log(head.value); // JavaScript knows to convert our number to a string for printing on its own.
+  head = head.prev; // No need to dereference, head.prev is the previous node, not a pointer to it!
+}
+
+// Outputs: 20, 18, 16, ... 6, 4, 2

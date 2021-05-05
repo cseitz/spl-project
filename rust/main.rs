@@ -1,22 +1,30 @@
-struct Obj {
-  counter: u32,
+// Rust
+// Reverse an unsigned int32 Array via Linked List
+
+struct Node {
+    value: u32, // Pass by Value
+    prev: Option<Box<Node>>, // Pass by Reference
 }
 
-fn increment_by(item: &mut Obj, amount: u32) { // Pass item by reference, amount by value.
-    (*item).counter += amount; // dereference item, and increment its counter.
- // amount = 5; <- "cannot assign to immutable argument"
-    println!("{}", amount.to_string()); // Outputs: 2
-    // amount is deallocated due to it exiting scope.
-}
-
-fn main() { // Entry point due to rust being compiled.
-    let mut obj = Obj {
-        counter: 5,
+fn main() { // Entry point because Rust is compiled
+    let array: [u32; 10] = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20];
+    // We must define the array type as u32, aka 32-bit unsigned integers.
+    let mut list = Node {
+        value: 0,
+        prev: None,
     };
-    let n: u32 = 2;
-    increment_by(&mut obj, n);
-    // Since we are printing u32's, we need to convert to strings.
-    println!("{}", obj.counter.to_string()); // Outputs: 7
-    println!("{}", n.to_string()); // Outputs: 2
-    // obj and n are deallocated due to leaving scope
+    for x in array.iter() {
+        let node = Node {
+            prev: Some(Box::new(list)), // Pass by Reference
+            value: *x, // Pass by Value
+        };
+        list = node; // Reassign our list head node
+    }
+    let mut head = list;
+    while !head.prev.is_none() {
+        println!("{}", head.value.to_string()); // u32 must be converted to a string literal in order to print.
+        head = *head.prev.unwrap(); // Dereference to get the node, plus account for Rust::Optional via unwrap.
+    }
 }
+
+// Outputs: 20, 18, 16, ... 6, 4, 2
