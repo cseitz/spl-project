@@ -30,6 +30,18 @@ Rust, because of its necessity to be compiled, frequently outperforms JavaScript
 
 However, this remains limiting factor. Because JavaScript is not compiled, it is able to be executed in every web browser in use today, and it remains the driving force behind nearly all website functionality.
 
+```rust
+fn main() { // Entry Point for Rust
+    println!("Hello, world!");
+}
+```
+
+Unlike Rust, JavaScript does not require an entry point as it is not compiled.
+
+```js
+console.log("Hello, world!");
+```
+
 ## Static Typing vs. Dynamic Typing
 
 ## Pass by Value & Reference vs. Dynamic Passing
