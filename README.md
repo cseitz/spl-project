@@ -154,3 +154,75 @@ console.log(n); // Outputs: 2
 Rust is intelligent about how memory is allocated and uses interesting techniques and compiler optimization to be able to know when memory is no longer needed, and have it be marked for deallocation.
 
 JavaScript, on the other hand, relies on a Garbage Collector that searches through objects and deallocates instances that are no longer being referred to.
+
+# Reversing an Array via Linked List
+
+#### [rust/main.rs](./javascript/main.js)
+```rust
+// Rust
+// Reverse an unsigned int32 Array via Linked List
+
+struct Node {
+    value: u32, // Pass by Value
+    prev: Option<Box<Node>>, // Pass by Reference
+}
+
+fn main() { // Entry point because Rust is compiled
+    let array: [u32; 10] = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20];
+    // We must define the array type as u32, aka 32-bit unsigned integers.
+    let mut list = Node {
+        value: 0,
+        prev: None,
+    };
+    for x in array.iter() {
+        let node = Node {
+            prev: Some(Box::new(list)), // Pass by Reference
+            value: *x, // Pass by Value
+        };
+        list = node; // Reassign our list head node
+    }
+    let mut head = list;
+    while !head.prev.is_none() {
+        println!("{}", head.value.to_string()); // u32 must be converted to a string literal in order to print.
+        head = *head.prev.unwrap(); // Dereference to get the node, plus account for Rust::Optional via unwrap.
+    }
+}
+
+// Outputs: 20, 18, 16, ... 6, 4, 2
+
+```
+
+#### [javascript/main.js](./rust/main.rs)
+```js
+// JavaScript
+// Reverses an array of values via Linked List
+
+class Node {
+  constructor(config = {}) {
+    let { prev, value } = config;
+    this.prev = prev || null; // Optonal Pass by Value
+    this.value = value || null; // Optonal Pass by Value
+  }
+}
+
+let array = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20];
+// JavaScript knows to use the Number type.
+
+let list = new Node();
+for (let x of array) {
+  let node = new Node({
+    prev: list, // JavaScript automatically passes objects by reference, so no need for pointers.
+    value: x // Pass by Value
+  });
+  list = node; // Reassign our list head node
+}
+
+let head = list;
+while (head.prev) {
+  console.log(head.value); // JavaScript knows to convert our number to a string for printing on its own.
+  head = head.prev; // No need to dereference, head.prev is the previous node, not a pointer to it!
+}
+
+// Outputs: 20, 18, 16, ... 6, 4, 2
+
+```
