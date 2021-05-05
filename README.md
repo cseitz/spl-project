@@ -149,7 +149,7 @@ console.log(obj.counter); // Outputs: 7
 console.log(n); // Outputs: 2
 ```
 
-## Smart Allocation vs. Garbage Collection
+## Compiler Optimization vs. Garbage Collection
 
 Rust is intelligent about how memory is allocated and uses interesting techniques and compiler optimization to be able to know when memory is no longer needed, and have it be marked for deallocation.
 
