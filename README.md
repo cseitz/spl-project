@@ -37,7 +37,7 @@ JavaScript is interpreted by Node.js's V8 Engine, and can be executed via `node 
 
 Rust, because of its necessity to be compiled, frequently outperforms JavaScript in nearly all situations.
 
-However, Javascript's ability to be transpiled makes it more applicable to a variety of use cases. JavaScript is able to be executed in every web browser in use today, and it remains the driving force behind nearly all website functionality.
+However, Javascript's ability to be interpreted makes it more applicable to a variety of use cases. JavaScript is able to be executed in every web browser in use today, and it remains the driving force behind nearly all website functionality.
 
 
 Unlike Rust, JavaScript does not require an entry point as it is not compiled.
