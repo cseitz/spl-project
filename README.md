@@ -54,12 +54,19 @@ Unlike Rust, JavaScript does not require an entry point as it is not compiled.
 // JavaScript
 console.log("Hello, world!");
 ```
+```bash
+node file.js # Run Interpreter & Execute
+```
 
 ```rust
 // Rust
 fn main() { // Entry Point for Rust
     println!("Hello, world!");
 }
+```
+```bash
+rustc file.rs # Compile
+./file # Execute
 ```
 
 ## Static Typing vs. Dynamic Typing
