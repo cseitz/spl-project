@@ -4,7 +4,7 @@ Rust and JavaScript are both highly versatile tools for coding powerful applicat
 
 ## Installation
 
-In order to execute the code includes in this project, one must install both Rust and Node.js
+In order to execute the code included in this project, one must install both Rust and Node.js
 
 #### [Rust Compiler](https://www.rust-lang.org/tools/install)
 #### [Node.js Interpreter](https://nodejs.org/en/download/)
