@@ -15,6 +15,7 @@ fn main() { // Entry point due to rust being compiled.
     };
     let n: u32 = 2;
     increment_by(&mut obj, n);
+    // Since we are printing u32's, we need to convert to strings.
     println!("{}", obj.counter.to_string()); // Outputs: 7
     println!("{}", n.to_string()); // Outputs: 2
     // obj and n are deallocated due to leaving scope
