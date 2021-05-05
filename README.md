@@ -1,8 +1,8 @@
 
 
 ## Installation
-#### [Rust](https://www.rust-lang.org/tools/install)
-#### [Node.js](https://nodejs.org/en/download/)
+#### [Rust Compiler](https://www.rust-lang.org/tools/install)
+#### [Node.js Interpreter](https://nodejs.org/en/download/)
 
 ## Execution
 ```bash
