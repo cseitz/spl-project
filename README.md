@@ -8,9 +8,6 @@ In the following source code, the following programming paradigms will be showca
 3. [Pass by Value & Reference vs. Dynamic Passing](#pass-by-value--reference-vs-dynamic-passing)
 4. [Smart Allocation vs. Garbage Collection](#smart-allocation-vs-garbage-collection)
 
-#### [Rust Code](./rust/main.rs)
-#### [JavaScript Code](./javascript/main.js)
-
 ## Installation
 
 In order to execute the code included in this project, one must install both Rust and Node.js
@@ -26,6 +23,17 @@ node javascript/main.js
 # Rust
 rustc rust/main.rs && ./main
 ```
+
+## Submission Code
+
+Below, I showcase each programming paradigm and provide some sample code that illustraits it.
+
+Inside of `javascript/main.js` and `rust/main.rs`, I include code that showcases all four paradigms.
+
+#### [javascript/main.js](./rust/main.rs)
+#### [rust/main.rs](./javascript/main.js)
+
+These files are my official code submissions, but the details below explain each of the paradigms with specific examples.
 
 # Programming Paradigms
 
