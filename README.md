@@ -1,6 +1,6 @@
-## Structure of Programming Languages - Project
+# Structure of Programming Languages - Project
 
-Rust and JavaScript are both highly versatile tools for coding powerful applications, yet each has its own specializations. Both languages vary significantly across programming paradigms, and this project sets out to highlight three of those.
+Rust and JavaScript are both highly versatile tools for coding powerful applications, yet each has its own specializations. Both languages vary significantly across programming paradigms, and this project sets out to highlight four of those.
 
 ## Installation
 
@@ -17,3 +17,13 @@ node javascript/main.js
 # Rust
 rustc rust/main.rs && ./main
 ```
+
+# Programming Paradigms
+
+## Compiled vs. Interpreted
+
+## Static Typing vs. Dynamic Typing
+
+## Pass by Value & Reference vs. Dynamic Passing
+
+## Smart Allocation vs. Garbage Collection
