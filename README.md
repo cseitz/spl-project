@@ -55,6 +55,7 @@ JavaScript uses dynamic typing that infers the desired type at runtime based on 
 // Rust
 let a: u32 = 5;
 let b: u32 = 8;
+// u32 is an unsigned 32-bit integer.
 
 fn main() {
   let c: u32 = a + b;
@@ -66,6 +67,8 @@ fn main() {
 // JavaScript
 let a = 5;
 let b = 8;
+// JavaScript infers we are using an integer.
+
 console.log(a + b); // 13
 ```
 
