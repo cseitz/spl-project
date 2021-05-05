@@ -22,6 +22,14 @@ rustc rust/main.rs && ./main
 
 ## Compiled vs. Interpreted
 
+Rust requires compilation via `rustc file.rs` in order to be executed.
+
+JavaScript is interpreted by Node.js's V8 Engine, and can be executed via `node file.js`.
+
+Rust, because of its necessity to be compiled, frequently outperforms JavaScript in nearly all situations.
+
+However, this remains limiting factor. Because JavaScript is not compiled, it is able to be executed in every web browser in use today, and it remains the driving force behind nearly all website functionality.
+
 ## Static Typing vs. Dynamic Typing
 
 ## Pass by Value & Reference vs. Dynamic Passing
