@@ -227,3 +227,10 @@ while (head.prev) {
 // Outputs: 20, 18, 16, ... 6, 4, 2
 
 ```
+
+# Additional Info
+
+This project was built using Node.js v14.8.0 and rustc 1.15.0
+
+#### [Rust Compiler](https://www.rust-lang.org/tools/install)
+#### [Node.js Interpreter](https://nodejs.org/en/download/)
